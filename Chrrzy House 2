@@ -1,0 +1,17 @@
+import simplegui
+
+def draw_handler(canvas):
+    canvas.draw_polygon([(400, 100), (500, 300), (300, 300)], 12, 'Black', 'Red')
+    canvas.draw_polygon([(300, 300), (500, 300), (500, 500), (300, 500)], 12, 'Black', 'Blue')
+    canvas.draw_circle((400, 10), 100, 12, 'Black', 'Orange')
+    canvas.draw_circle((420, 5), 100, 12, 'Black', 'Black')
+    canvas.draw_text('Guys! it\'s the Eclipse!', (20, 800), 40, 'Red')
+    canvas.draw_polygon([(350, 300), (500, 300), (500, 500), (350, 500)], 12, 'Black', 'Brown')
+    canvas.draw_polygon([(400, 350), (500, 350), (500, 500), (400, 500)], 12, 'Black', 'Gray')
+    canvas.draw_circle((480, 410), 10, 12, 'Black', 'Gold')
+
+frame = simplegui.create_frame('Chrrzy House', 900, 900)
+
+frame.set_canvas_background("Black")
+frame.set_draw_handler(draw_handler)
+frame.start()
